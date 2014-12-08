@@ -8,6 +8,12 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+  <div class="name">
+    <%= f.label :name %>
+    <em>(This is the name other users see. You won't be able to change it)</em><br />
+    <%= f.text_field :name %>
+  </div>
+
   <div class="field">
     <%= f.label :password %>
     <% if @validatable %>
