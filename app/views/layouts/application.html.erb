@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <%= javascript_include_tag "application" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- BOOTSTRAP -->
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"> </script>
+
   <title>EcomicsV01</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <%= yield %>
+
+  <%= render 'layouts/header' %>
+
+
+  <div class="container">
+    <% if !notice.nil? %><p class="alert alert-success"><%= notice %></p><%end%>
+    <% if !alert.nil? %><p class="alert alert-danger"><%= alert %></p><%end%>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
