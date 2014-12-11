@@ -4,13 +4,14 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
+    <em>(Nobody will see it)</em><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="name">
     <%= f.label :name %>
-    <em>(This is the name other users see. You won't be able to change it)</em><br />
+    <em>(You won't be able to change it)</em><br />
     <%= f.text_field :name %>
   </div>
 
