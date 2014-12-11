@@ -5,7 +5,7 @@ describe "ecomics/edit" do
     @ecomic = assign(:ecomic, stub_model(Ecomic,
       :name => "MyString",
       :description => "MyString",
-      :type => "",
+      :comic_type => "",
       :user_id => 1
     ))
   end
@@ -17,7 +17,7 @@ describe "ecomics/edit" do
     assert_select "form[action=?][method=?]", ecomic_path(@ecomic), "post" do
       assert_select "input#ecomic_name[name=?]", "ecomic[name]"
       assert_select "input#ecomic_description[name=?]", "ecomic[description]"
-      assert_select "input#ecomic_type[name=?]", "ecomic[type]"
+      assert_select "input#ecomic_comic_type[name=?]", "ecomic[comic_type]"
       assert_select "input#ecomic_user_id[name=?]", "ecomic[user_id]"
     end
   end

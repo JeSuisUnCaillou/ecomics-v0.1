@@ -42,6 +42,6 @@ class EcomicsController < ApplicationController
     end
 
     def ecomic_params
-      params.require(:ecomic).permit(:name, :description, :type, :user_id)
+      params.require(:ecomic).permit(:name, :description, :comic_type, :user_id)
     end
 end
