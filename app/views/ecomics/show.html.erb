@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ecomic.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ecomic.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @ecomic.type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ecomic.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_ecomic_path(@ecomic) %> |
+<%= link_to 'Back', ecomics_path %>

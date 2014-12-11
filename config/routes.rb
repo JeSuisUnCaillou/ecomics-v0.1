@@ -1,4 +1,6 @@
 EcomicsV01::Application.routes.draw do
+  resources :ecomics
+
   devise_for :users
   root "static_pages#home"
 
