@@ -7,9 +7,11 @@ FactoryGirl.define do
   end
 
 
-  #factory :ecomic do
-  #  sequence(:name) { |n| "eComic #{n}" }
-  #  user ||= FactoryGirl.create(:user)
-  #end
+  factory :ecomic do
+    sequence(:name) { |n| "eComic #{n}" }
+    description "Deeeeeeeeeescription !"
+    comic_type "testype"
+    user ||= FactoryGirl.create(:user)
+  end
 
 end

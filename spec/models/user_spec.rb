@@ -8,6 +8,7 @@ describe User do
 
   it { should be_valid }
   it { should respond_to(:name) }
+  it { should respond_to(:ecomics) }
 
   describe "without a username" do
     before { @user.name = nil }
@@ -22,4 +23,11 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "has many ecomics" do
+    let!(:ec1) { FactoryGirl.create(:ecomic, user: @user) }
+    let!(:ec2) { FactoryGirl.create(:ecomic, user: @user) }
+    let!(:ec3) { FactoryGirl.create(:ecomic, user: @user) }
+
+    its(:ecomics) { should eq [ec1, ec2, ec3] }
+  end
 end
