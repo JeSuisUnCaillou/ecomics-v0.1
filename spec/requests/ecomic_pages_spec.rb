@@ -20,8 +20,11 @@ describe "eComic pages" do
         visit edit_ecomic_path(ecomic)
       end
       it { should_not have_content("Editing ecomic") }
-      it { should have_content("You're not the owner, you can't do that.") }
-      
+      it { should have_content("You're not the owner, you can't do that.") } 
+    end
+
+    describe "being the owner" do
+      pending("write it")
     end
 
   end
@@ -39,10 +42,30 @@ describe "eComic pages" do
         visit new_ecomic_path
       end
       it { should have_content("New ecomic") }
-      it { should_not have_content("You need to sign in or sign up before continuing.") } 
+      it { should_not have_content("You need to sign in or sign up before continuing.") }
+
+      describe "filling the new ecomic form" do
+        before do
+          fill_in "Name", with: "testname"
+          fill_in "Description", with: "testdescription"
+        end
+        it "should let you create an ecomic" do
+          expect { click_button "Create Ecomic" }.to change(Ecomic, :count).by(1)
+        end
+        
+        describe "after saving the eComic -> show page" do
+          before { click_button "Create Ecomic" }
+          it { should have_content("testname") }
+          it { should have_content("testdescription") }
+        end
+      end
+
     end
 
   end
 
+  describe "eComics index page" do
+    pending("write it") 
+  end
 
 end

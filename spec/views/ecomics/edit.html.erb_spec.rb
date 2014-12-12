@@ -18,7 +18,6 @@ describe "ecomics/edit" do
       assert_select "input#ecomic_name[name=?]", "ecomic[name]"
       assert_select "input#ecomic_description[name=?]", "ecomic[description]"
       assert_select "input#ecomic_comic_type[name=?]", "ecomic[comic_type]"
-      assert_select "input#ecomic_user_id[name=?]", "ecomic[user_id]"
     end
   end
 end

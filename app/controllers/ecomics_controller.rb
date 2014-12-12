@@ -26,6 +26,7 @@ class EcomicsController < ApplicationController
 
   def create
     @ecomic = Ecomic.new(ecomic_params)
+    @ecomic.user = current_user
     @ecomic.save
     respond_with(@ecomic)
   end
@@ -46,7 +47,7 @@ class EcomicsController < ApplicationController
     end
 
     def ecomic_params
-      params.require(:ecomic).permit(:name, :description, :comic_type, :user_id)
+      params.require(:ecomic).permit(:name, :description, :comic_type)
     end
   
     def authorize
