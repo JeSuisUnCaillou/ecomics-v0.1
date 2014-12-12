@@ -11,7 +11,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "eComic #{n}" }
     description "Deeeeeeeeeescription !"
     comic_type "testype"
-    user ||= FactoryGirl.create(:user)
+    user FactoryGirl.create(:user)
   end
 
 end

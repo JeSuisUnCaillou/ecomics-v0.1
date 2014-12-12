@@ -17,9 +17,7 @@ describe User do
 
   describe "with an already used username" do
     let!(:old_user) { FactoryGirl.create(:user) }
-    before do
-      @user.name = old_user.name
-    end
+    before { @user.name = old_user.name }
     it { should_not be_valid }
   end
 
