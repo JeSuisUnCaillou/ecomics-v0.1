@@ -24,7 +24,23 @@ describe "eComic pages" do
     end
 
     describe "being the owner" do
-      pending("write it")
+      before do
+        sign_in user
+        visit edit_ecomic_path(ecomic)
+      end
+      it { should have_content("Editing ecomic") }
+      it { should_not have_content("You're not the owner, you can't do that.") } 
+
+      describe "editing a comic" do
+        before do
+          fill_in "Name", with: "testname"
+          fill_in "Description", with: "testdescription"
+          click_button "Update Ecomic"
+        end
+        it { should have_content("testname") }
+        it { should have_content("testdescription") }
+      end
+
     end
 
   end
@@ -65,7 +81,13 @@ describe "eComic pages" do
   end
 
   describe "eComics index page" do
-    pending("write it") 
+    let!(:e1) { FactoryGirl.create(:ecomic, name:"ec1") } 
+    let!(:e2) { FactoryGirl.create(:ecomic, name:"ec2") } 
+    let!(:e3) { FactoryGirl.create(:ecomic, name:"ec3") } 
+    before { visit ecomics_path }
+    it { should have_content("ec1") }
+    it { should have_content("ec2") }
+    it { should have_content("ec3") }
   end
 
 end
