@@ -14,4 +14,11 @@ FactoryGirl.define do
     user FactoryGirl.create(:user)
   end
 
+  
+  factory :frame do
+    sequence(:name) { |n| "frame #{n}" }
+    duration 50
+    ecomic FactoryGirl.create(:ecomic)
+  end
+
 end

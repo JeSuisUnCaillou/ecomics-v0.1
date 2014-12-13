@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213155949) do
+ActiveRecord::Schema.define(version: 20141213171352) do
 
   create_table "ecomics", force: true do |t|
     t.string   "name"
@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 20141213155949) do
   create_table "frames", force: true do |t|
     t.string   "name"
     t.integer  "duration"
-    t.integer  "user_id"
     t.integer  "ecomic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
