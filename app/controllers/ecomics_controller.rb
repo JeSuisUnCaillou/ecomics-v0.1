@@ -7,6 +7,11 @@ class EcomicsController < ApplicationController
 
   respond_to :html
 
+  def myecomics
+    @ecomics = Ecomic.where(user: current_user)
+    respond_with(@ecomics)
+  end
+
   def index
     @ecomics = Ecomic.all
     respond_with(@ecomics)

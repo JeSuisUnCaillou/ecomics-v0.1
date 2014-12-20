@@ -1,0 +1,24 @@
+
+<h1>Listing ecomics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render partial: 'ecomics/ecomic_overview', collection: ecomics %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ecomic', new_ecomic_path %>

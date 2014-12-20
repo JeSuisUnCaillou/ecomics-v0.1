@@ -1,0 +1,10 @@
+<tr>
+        <td><%= ecomic_overview.name %></td>
+        <td><%= ecomic_overview.description %></td>
+        <td><%= ecomic_overview.comic_type %></td>
+        <td><%= ecomic_overview.user_id %></td>
+        <td><%= link_to 'Show', ecomic_overview %></td>
+        <td><%= link_to 'Edit', edit_ecomic_path(ecomic_overview) %></td>
+        <td><%= link_to 'Destroy', ecomic_overview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+

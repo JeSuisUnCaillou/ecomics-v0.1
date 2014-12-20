@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">My PopComics</a>
+      <a class="navbar-brand" href="/">My PopComics</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -20,6 +20,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
+          <li class="<%=set_active("ecomics/myecomics") %>"><%= link_to "My ecomics", myecomics_path, class: 'navbar-link navbar-elem'  %></li>
           <li class="<%=set_active("devise/registrations/edit")%>"><%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link navbar-elem' %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link navbar-elem'  %></li>
         <% else %>

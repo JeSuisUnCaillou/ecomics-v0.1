@@ -1,5 +1,7 @@
 EcomicsV01::Application.routes.draw do
   resources :ecomics
+  match 'myecomics', to: 'ecomics#myecomics', via: 'get' 
+
 
   devise_for :users
   root "static_pages#home"

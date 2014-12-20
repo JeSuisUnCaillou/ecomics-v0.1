@@ -90,4 +90,20 @@ describe "eComic pages" do
     it { should have_content("ec3") }
   end
 
+
+  describe "my Ecomics page" do
+    let!(:other_user) { FactoryGirl.create(:user) }
+    let!(:e0) { FactoryGirl.create(:ecomic, name:"ec0", user: user) } 
+    let!(:e1) { FactoryGirl.create(:ecomic, name:"ec1", user: other_user) } 
+    let!(:e2) { FactoryGirl.create(:ecomic, name:"ec2", user: user) } 
+    let!(:e3) { FactoryGirl.create(:ecomic, name:"ec3", user: other_user) } 
+    before do
+      sign_in user
+      visit myecomics_path
+    end
+    it { should have_content("ec0") }
+    it { should_not have_content("ec1") }
+    it { should have_content("ec2") }
+    it { should_not have_content("ec3") }
+  end
 end
