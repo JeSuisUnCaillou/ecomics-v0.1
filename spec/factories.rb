@@ -1,3 +1,5 @@
+include ActionDispatch::TestProcess
+
 FactoryGirl.define do
 
   factory :user do
@@ -17,8 +19,9 @@ FactoryGirl.define do
   
   factory :frame do
     sequence(:name) { |n| "frame #{n}" }
-    duration 50
+    duration 0
     ecomic FactoryGirl.create(:ecomic)
+    picture { fixture_file_upload(Rails.root.join('app', 'assets', 'images', 'mypopcomics-logo.png'), 'image/png') }
   end
 
 end

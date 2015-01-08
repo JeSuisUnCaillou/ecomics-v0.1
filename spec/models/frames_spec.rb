@@ -9,6 +9,7 @@ describe Frame do
   it { should respond_to(:name) }
   it { should respond_to(:duration) }
   it { should respond_to(:ecomic) }
+  it { should respond_to(:picture) }
 
 
   describe "without a name" do
@@ -30,6 +31,11 @@ describe Frame do
 
   describe "with a non existant eComic id" do
     before { @frame.ecomic_id = -1 }
+    it { should_not be_valid }
+  end
+
+  describe "whithout a picture" do
+    before { @frame.picture = nil }
     it { should_not be_valid }
   end
 
