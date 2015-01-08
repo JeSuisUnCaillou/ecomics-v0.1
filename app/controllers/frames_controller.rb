@@ -4,6 +4,7 @@ class FramesController < ApplicationController
 
   def create
     @frame = Frame.new(frame_params)
+    @frame.name = frame_params[:picture].original_filename if frame_params[:name].nil?
     if @frame.save
       redirect_to ecomic_path(@frame.ecomic), notice: "frame successfuly created"
     else 
