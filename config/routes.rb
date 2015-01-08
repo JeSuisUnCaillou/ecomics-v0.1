@@ -1,5 +1,6 @@
 EcomicsV01::Application.routes.draw do
   resources :ecomics
+  resources :frames
   match 'myecomics', to: 'ecomics#myecomics', via: 'get' 
 
 

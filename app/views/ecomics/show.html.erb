@@ -1,10 +1,9 @@
-<p id="notice"><%= notice %></p>
+<h2>
 
-<p>
   <strong>Name:</strong>
   <%= @ecomic.name %>
-</p>
 
+</h2>
 <p>
   <strong>Description:</strong>
   <%= @ecomic.description %>
@@ -17,8 +16,18 @@
 
 <p>
   <strong>User:</strong>
-  <%= @ecomic.user_id %>
+  <%= @ecomic.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_ecomic_path(@ecomic) if user_signed_in? && current_user == @ecomic.user %>
 <%= link_to 'Back', ecomics_path %>
+
+<p>
+  <h3>ADD FRAMES</h3>
+  <%= render partial: "frames/form", locals: { ecomic: @ecomic } %>
+</p>
+
+<p>
+  <h3>ALL FRAMES</h3>
+  <%= render partial: "frames/frame", collection: @ecomic.frames %>
+</p>
