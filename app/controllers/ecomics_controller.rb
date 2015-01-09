@@ -18,7 +18,6 @@ class EcomicsController < ApplicationController
   end
 
   def show
-    @frame = Frame.new
     respond_with(@ecomic)
   end
 
@@ -28,6 +27,7 @@ class EcomicsController < ApplicationController
   end
 
   def edit
+    @frame = Frame.new
   end
 
   def create

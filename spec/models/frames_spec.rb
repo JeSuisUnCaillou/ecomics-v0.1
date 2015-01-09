@@ -20,7 +20,7 @@ describe Frame do
   describe "with an already used name" do
     let!(:old_frame) { FactoryGirl.create(:frame) }
     before { @frame.name = old_frame.name  }
-    it { should_not be_valid }
+    it { should be_valid }
   end
 
 

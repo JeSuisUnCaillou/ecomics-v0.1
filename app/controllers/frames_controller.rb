@@ -3,9 +3,6 @@ class FramesController < ApplicationController
   respond_to :html
 
   def create
-    #@frame = Frame.new(frame_params)
-    #@frame.name = frame_params[:picture].original_filename if frame_params[:name].nil? && !frame_params[:picture].nil?
-
     message = ""
     error = false
 
@@ -33,16 +30,35 @@ class FramesController < ApplicationController
     else
       redirect_to ecomic_path(Ecomic.find(frame_params[:ecomic_id])), alert: "frames not created : #{message}" 
     end
-    #if @frame.save
-    #  redirect_to ecomic_path(@frame.ecomic), notice: "frame successfuly created"
-    #else 
-    #  redirect_to ecomic_path(@frame.ecomic), alert: "frame not created"
-    #end
+
   end
+
+  def destroy
+    frame = Frame.find(params[:id])
+    ecomic = frame.ecomic
+    frame.update_attribute('picture', nil)
+    frame.destroy
+
+    redirect_to ecomic_path(ecomic), notice: "frame successfuly deleted"
+  end
+
+  def edit
+    @frame = Frame.find(params[:id])
+  end
+
+  def update
+    @frame = Frame.find(params[:id])
+    if @frame.update(frame_params)
+      redirect_to ecomic_path(@frame.ecomic), notice: "frame successfuly updated"
+    else
+      redirect_to edit_frame_path(@frame), alert: "frame not updated"
+    end
+  end
+
 
   private
     def frame_params
-      params.require(:frame).permit(:name, :duration, :ecomic_id, pictures: [])
+      params.require(:frame).permit(:name, :duration, :ecomic_id, :picture, pictures: [])
     end
 
 end

@@ -7,6 +7,11 @@ describe "eComic pages" do
   
   subject { page }
 
+
+  describe "Show eComic Page" do
+    pending( "do it !")    
+  end
+
   describe "Edit eComic Page" do
     describe "without being logged in" do
       before { visit edit_ecomic_path(ecomic) }
@@ -39,6 +44,10 @@ describe "eComic pages" do
         end
         it { should have_content("testname") }
         it { should have_content("testdescription") }
+      end
+
+      describe "managing frames" do
+        pending "do it"
       end
 
     end

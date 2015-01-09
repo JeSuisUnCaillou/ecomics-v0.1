@@ -22,10 +22,6 @@
 <%= link_to 'Edit', edit_ecomic_path(@ecomic) if user_signed_in? && current_user == @ecomic.user %>
 <%= link_to 'Back', ecomics_path %>
 
-<p>
-  <h3>ADD FRAMES</h3>
-  <%= render partial: "frames/form", locals: { ecomic: @ecomic } %>
-</p>
 
 <p>
   <h3>ALL FRAMES</h3>

@@ -2,5 +2,18 @@
 
 <%= render 'form' %>
 
+
+<p>
+  <h3>ADD FRAMES</h3>
+  <%= render partial: "frames/form", locals: { ecomic: @ecomic } %>
+</p>
+
+<p>
+  <h3>ALL FRAMES</h3>
+  <%= render partial: "frames/frame", collection: @ecomic.frames %>
+</p>
+
+
+
 <%= link_to 'Show', @ecomic %> |
 <%= link_to 'Back', ecomics_path %>

@@ -1,3 +1,12 @@
 
-<li><%= frame.name %> <%= image_tag frame.picture.url(:thumb) %> <%= frame.duration %>ms 
+<li>
+  <%= frame.name %>
+  <%= image_tag frame.picture.url(:thumb) %>
+  <%= frame.duration %>ms
+
+
+  <%= link_to "delete", frame_path(frame), method: :delete %>
+  <%= link_to "edit", edit_frame_path(frame) %>
+
+</li>
 

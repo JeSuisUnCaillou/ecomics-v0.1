@@ -1,0 +1,20 @@
+<h1>Editing frame</h1>
+
+<%= render partial: "frames/frame", locals: { frame: @frame } %>
+
+<%= form_for @frame, method: :patch, :html => { :multipart => true } do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :picture %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Edit Frame" %>
+  </div>
+
+<% end %>
+
