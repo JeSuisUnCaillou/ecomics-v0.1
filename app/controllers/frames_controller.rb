@@ -26,9 +26,9 @@ class FramesController < ApplicationController
     end
     
     if !error
-      redirect_to ecomic_path(Ecomic.find(frame_params[:ecomic_id])), notice: "frames successfuly created"
+      redirect_to edit_ecomic_path(Ecomic.find(frame_params[:ecomic_id])), notice: "frames successfuly created"
     else
-      redirect_to ecomic_path(Ecomic.find(frame_params[:ecomic_id])), alert: "frames not created : #{message}" 
+      redirect_to edit_ecomic_path(Ecomic.find(frame_params[:ecomic_id])), alert: "frames not created : #{message}" 
     end
 
   end
