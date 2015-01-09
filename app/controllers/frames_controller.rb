@@ -49,7 +49,7 @@ class FramesController < ApplicationController
   def update
     @frame = Frame.find(params[:id])
     if @frame.update(frame_params)
-      redirect_to ecomic_path(@frame.ecomic), notice: "frame successfuly updated"
+      redirect_to edit_ecomic_path(@frame.ecomic), notice: "frame successfuly updated"
     else
       redirect_to edit_frame_path(@frame), alert: "frame not updated"
     end
