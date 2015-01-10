@@ -7,6 +7,7 @@ gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'paperclip', '~> 4.2'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
