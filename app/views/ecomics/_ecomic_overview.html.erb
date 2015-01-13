@@ -16,7 +16,7 @@
 <div class="col-md-3 ecomic-overview">
 <div class="ecomic-overbody panel">
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 ecomic-overview-picture">
     <a href="<%=ecomic_path(ecomic_overview)%>">
       <%= image_tag ecomic_overview.frames.first.picture.url(:medium), class: "img-responsive" if !ecomic_overview.frames.empty? %>
     </a>
