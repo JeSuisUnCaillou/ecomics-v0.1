@@ -14,9 +14,10 @@
 
 // FONTS
 .navbar {
-  * {
+  a {
     font-family: "sensation-bold";
     font-size: 11px;
+    letter-spacing: 1px;
   }
 }
 
@@ -24,22 +25,7 @@
 // NAVBAR
 
 .navbar {
-  //height: 100px;
-  .container-fluid {
-    //margin-left: 40px;
-    //margin-right: 40px;
-  }
-
-  .navbar-right {
-
-  }
-  .nav-social-media {
-    height: 50px;
-    width: 138px;
-    float: right;
-    vertical-align: top;
-  }
-
+  background-color: white;
   li:hover a.navbar-link { background-color: #e7e7e7; }
   .active { background-color: #e7e7e7; }
 
