@@ -22,12 +22,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <!--li class="<%=set_active("static_pages/home")%>"><a href="/">Home<span class="sr-only">(current)</span></a></li-->
-        <li class="<%=set_active("ecomics/index")%>">
+        <li class="<%=set_active("ecomics/index") || set_active("ecomics/show")%>">
           <%= link_to "Library", ecomics_path, class: "navbar-link navbar-elem" %>
        </li>
 
        <% if user_signed_in? %>
-         <li class="<%=set_active("ecomics/myecomics") || set_active("ecomics/new") %>"><%= link_to "My PopComics", myecomics_path, class: 'navbar-link navbar-elem'  %></li>
+         <li class="<%=set_active("ecomics/myecomics") || set_active("ecomics/new") || set_active("ecomics/edit") || set_active("ecomics/create") %>"><%= link_to "My PopComics", myecomics_path, class: 'navbar-link navbar-elem'  %></li>
 
          <li class="dropdown <%= set_active("devise/registrations/edit") %>">
            <a href="#" class="dropdown-toggle navbar-link navbar-elem" data-toggle="dropdown" role="button" aria-expanded="false"><%= current_user.name %><span class="caret"></span></a>

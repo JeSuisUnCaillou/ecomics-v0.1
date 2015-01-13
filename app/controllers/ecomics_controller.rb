@@ -34,9 +34,11 @@ class EcomicsController < ApplicationController
     @ecomic = Ecomic.new(ecomic_params)
     @ecomic.user = current_user
 
-    @ecomic.save
-    #respond_with(@ecomic)
-    redirect_to edit_ecomic_path(@ecomic)
+    if @ecomic.save
+      redirect_to edit_ecomic_path(@ecomic)
+    else
+      respond_with(@ecomic)
+    end
   end
 
   def update
