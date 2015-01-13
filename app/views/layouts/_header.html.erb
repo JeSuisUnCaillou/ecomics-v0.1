@@ -9,12 +9,14 @@
         <span class="icon-bar"></span>
       </button> 
       <!--a class="navbar-brand" href="/">My PopComics</a-->
-      <div class="<%=set_active("static_pages/home")%> navbar-logo">
-        <a href="/" class="navbar-link navbar-elem">
-          <%= image_tag "mypopcomics-logo.png", height: 40%>
-          <span class="sr-only">(current)</span>
-        </a>
-      </div>
+      <ul style="margin: 0px; padding: 0px;">
+        <li class="<%=set_active("static_pages/home")%>" style="display: block;">
+          <a href="/" class="navbar-link navbar-logo" style="display: block;">
+            <%= image_tag "mypopcomics-logo.png", height: 40%>
+            <!--span class="sr-only">(current)</span-->
+          </a>
+        </li>
+      </ul>
 
     </div>
 

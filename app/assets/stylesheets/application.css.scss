@@ -41,6 +41,7 @@
   }
 
   li:hover a.navbar-link { background-color: #e7e7e7; }
+  .active { background-color: #e7e7e7; }
 
 /*  .nav{
     float: none;
@@ -55,14 +56,19 @@
   .navbar-elem {
     padding-right: 24px;
     padding-left: 24px;
-    //padding-top: 30px;
-    //padding-bottom: 30px;
-    
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .navbar-logo {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+  .navbar-toggle {
+    margin-top: 20px;
   }
 
 }
 
-.navbar-logo {
-  display: block;
-  margin-top: 10px;
-}
+
