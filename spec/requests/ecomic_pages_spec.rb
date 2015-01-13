@@ -78,10 +78,10 @@ describe "eComic pages" do
           expect { click_button "Create Ecomic" }.to change(Ecomic, :count).by(1)
         end
         
-        describe "after saving the eComic -> show page" do
+        describe "after saving the eComic -> edit page" do
           before { click_button "Create Ecomic" }
-          it { should have_content("testname") }
-          it { should have_content("testdescription") }
+          it { should have_selector("input#ecomic_name[value=testname]") }
+          it { should have_selector("input#ecomic_description[value=testdescription]") }
         end
       end
 
