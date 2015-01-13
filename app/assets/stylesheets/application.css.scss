@@ -25,8 +25,12 @@ body {
 h3 {
   font-family: "sensation-bold";
   font-size: 18px;
+  letter-spacing: 1px;
   margin: 5px 0 5px 0;
-} 
+}
+.bold {
+  font-family: "sensation-bold";
+}
 
 // NAVBAR
 
@@ -75,3 +79,4 @@ h3 {
 .text-holder {
   word-wrap: break-word;
 }
+

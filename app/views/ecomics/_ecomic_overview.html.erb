@@ -13,24 +13,33 @@
         <% end %>
       </tr-->
 
-<div class="col-md-2">
-  <div>
-    <%= image_tag ecomic_overview.frames.first.picture.url(:medium), class: "img-responsive" if !ecomic_overview.frames.empty? %>
+<div class="col-md-3 ecomic-overview">
+<div class="ecomic-overbody panel">
+<div class="row">
+  <div class="col-md-12">
+    <a href="<%=ecomic_path(ecomic_overview)%>">
+      <%= image_tag ecomic_overview.frames.first.picture.url(:medium), class: "img-responsive" if !ecomic_overview.frames.empty? %>
+    </a>
   </div>
-  <div class="text-holder">
+  <div class="text-holder col-md-12">
     <h3><%= ecomic_overview.name %></h3>
   </div>
-  <div class="text-holder">
+  <div class="text-holder ecomic-overview-description col-md-12">
     <%= ecomic_overview.description.truncate(80) %>
   </div>
-  <div class="text-holder">
-    Auteur : <%= ecomic_overview.user.name %>
+
+  <div class="text-holder ecomic-overview-auteur col-md-9 col-xs-8">
+    <span class="bold">Auteur :</span> <%= ecomic_overview.user.name %>
   </div>
-  <div>
+
+  <div class="ecomic-overview-links col-md-3 col-xs-4">
     <%= link_to 'Read', ecomic_overview %>
     <% if editable %>
       <%= link_to 'Edit', edit_ecomic_path(ecomic_overview) %>
       <%= link_to 'Destroy', ecomic_overview, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>
+
+</div>
+</div>
 </div>

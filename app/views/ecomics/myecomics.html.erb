@@ -1,5 +1,8 @@
 
-<div>
-  <%= link_to 'New Ecomic', new_ecomic_path %>
+<div class="row myecomics-toolbar">
+  <div class="col-md-12 text-center">
+    <%= link_to 'Create a comic', new_ecomic_path, class: "btn btn-default" %>
+  </div>
 </div>
+
 <%= render partial: 'ecomics/ecomics_list', locals: { ecomics: @ecomics, editable: true } %>

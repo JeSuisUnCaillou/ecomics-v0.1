@@ -2,6 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// MY ECOMICS
+
+.myecomics-toolbar {
+  margin-bottom: 10px;
+}
+
+
 // ECOMIC OVERVIEW
 
+.ecomic-overview {
+  .ecomic-overbody {
+    background-color: #e7e7e7;
+    padding: 20px;
+  }
+  padding: 10px;
+}
 
+.ecomic-overview-description {
+  margin-left: 10px;
+}
+.ecomic-overview-auteur {
+  //float: left;
+}
+.ecomic-overview-links {
+ a { float: right; }
+}
