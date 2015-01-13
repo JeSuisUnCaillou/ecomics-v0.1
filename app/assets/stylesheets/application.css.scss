@@ -15,7 +15,8 @@
 // FONTS
 .navbar {
   * {
-    font-family: "bebas";
+    font-family: "sensation-bold";
+    font-size: 11px;
   }
 }
 
@@ -30,22 +31,38 @@
   }
 
   .navbar-right {
+
+  }
+  .nav-social-media {
     height: 50px;
     width: 138px;
+    float: right;
+    vertical-align: top;
   }
 
   li:hover a.navbar-link { background-color: #e7e7e7; }
 
-  .navbar-collapse {
+/*  .nav{
+    float: none;
     text-align: center;
   }
-  .navbar-nav {
-    display: inline-block;
+  .nav > li{
     float: none;
+    display: inline-block;
     vertical-align: top;
+  }*/
+
+  .navbar-elem {
+    padding-right: 24px;
+    padding-left: 24px;
+    //padding-top: 30px;
+    //padding-bottom: 30px;
+    
   }
+
 }
 
 .navbar-logo {
+  display: block;
   margin-top: 10px;
 }
