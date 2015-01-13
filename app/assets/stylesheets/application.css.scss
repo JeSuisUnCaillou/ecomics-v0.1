@@ -13,14 +13,20 @@
  */
 
 // FONTS
-.navbar {
-  a {
-    font-family: "sensation-bold";
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
+.navbar a {
+  font-family: "sensation-bold";
+  font-size: 11px;
+  letter-spacing: 1px;
 }
-
+body {
+  font-family: "sensation" !important;
+  font-size: 15px;
+}
+h3 {
+  font-family: "sensation-bold";
+  font-size: 18px;
+  margin: 5px 0 5px 0;
+} 
 
 // NAVBAR
 
@@ -64,4 +70,8 @@
 
 }
 
+// GENERAL
 
+.text-holder {
+  word-wrap: break-word;
+}

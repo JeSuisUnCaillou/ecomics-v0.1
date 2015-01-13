@@ -1,7 +1,5 @@
 
-<h1>Listing ecomics</h1>
-
-<table>
+<!--table>
   <thead>
     <tr>
       <th>Name</th>
@@ -15,10 +13,13 @@
   </thead>
 
   <tbody>
-    <%= render partial: 'ecomics/ecomic_overview', collection: ecomics %>
+    <%#= render partial: 'ecomics/ecomic_overview', collection: ecomics, locals: { editable: editable } %>
   </tbody>
-</table>
+</table-->
 
-<br>
+<div class="row">
+    <%= render partial: 'ecomics/ecomic_overview', collection: ecomics, locals: { editable: editable } %>
 
-<%= link_to 'New Ecomic', new_ecomic_path %>
+</div>
+
+

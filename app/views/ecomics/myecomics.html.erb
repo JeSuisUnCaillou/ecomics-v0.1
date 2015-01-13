@@ -1,2 +1,5 @@
 
-<%= render partial: 'ecomics/ecomics_list', locals: { ecomics: @ecomics } %>
+<div>
+  <%= link_to 'New Ecomic', new_ecomic_path %>
+</div>
+<%= render partial: 'ecomics/ecomics_list', locals: { ecomics: @ecomics, editable: true } %>
