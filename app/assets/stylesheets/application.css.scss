@@ -26,8 +26,15 @@
 
 .navbar {
   background-color: white;
+  color: black;
+
   li:hover a.navbar-link { background-color: #e7e7e7; }
   .active { background-color: #e7e7e7; }
+  .dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    background-color: #e7e7e7;
+    color: black;
+  }
+
 
 /*  .nav{
     float: none;
