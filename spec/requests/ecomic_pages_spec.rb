@@ -78,7 +78,7 @@ describe "eComic pages" do
         describe "after saving the eComic -> edit page" do
           before { click_button "Create Ecomic" }
           it { should have_selector("input#ecomic_name[value=testname]") }
-          it { should have_selector("input#ecomic_description[value=testdescription]") }
+          it { should have_selector("textarea#ecomic_description", text: "testdescription") }
         end
       end
 
