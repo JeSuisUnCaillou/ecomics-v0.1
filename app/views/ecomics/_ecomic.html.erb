@@ -1,0 +1,10 @@
+
+<div class="ecomic-container">
+  <div class="text-center">
+    <h1><%= ecomic.name %></h1>
+    <span><%= ecomic.description %></span>
+  </div>
+  <div class="text-center ecomic-image-holder">
+    <%= image_tag ecomic.frames.first.picture.url(:original) %>
+  </div>
+</div>

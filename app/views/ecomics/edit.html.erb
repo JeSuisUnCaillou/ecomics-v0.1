@@ -8,7 +8,7 @@
     </table>
   </div>
   <div class="col-md-8 ecomic-right-panel">
-    
+    <%= render partial: "ecomics/ecomic", locals: { ecomic: @ecomic } %>
   </div>
 </div>
 
@@ -25,10 +25,10 @@
   <%= render partial: "frames/form", locals: { ecomic: @ecomic } %>
 </p>
 
-<p>
+<!--p>
   <h3>ALL FRAMES</h3>
   <%= render partial: "frames/frame", collection: @ecomic.frames %>
-</p>
+</p-->
 
 
 
