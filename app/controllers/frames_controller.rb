@@ -39,7 +39,7 @@ class FramesController < ApplicationController
     frame.update_attribute('picture', nil)
     frame.destroy
 
-    redirect_to ecomic_path(ecomic), notice: "frame successfuly deleted"
+    redirect_to edit_ecomic_path(ecomic), notice: "frame successfuly deleted"
   end
 
   def edit

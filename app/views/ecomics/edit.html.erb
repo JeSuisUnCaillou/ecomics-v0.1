@@ -1,8 +1,11 @@
 
+<%= render partial: "frames/modal_add_frames" %>
+
 <div class="row">
   <div class="col-md-4 ecomic-left-panel">
-
-
+    <div class="frames-menu">
+       <a class="btn btn-default" href="#" data-toggle="modal" data-target="#myModal">Add Pictures</a>
+    </div>
     <table class="table table-striped table-hover">
       <tbody>
         <%= render partial: "frames/frame_overview", collection: @ecomic.frames %>
@@ -24,14 +27,14 @@
 <%= render 'form' %>
 
 
-<p>
+<!--p>
   <h3>ADD FRAMES</h3>
-  <%= render partial: "frames/form", locals: { ecomic: @ecomic } %>
-</p>
+  <%#= render partial: "frames/form", locals: { ecomic: @ecomic } %>
+</p-->
 
 <!--p>
   <h3>ALL FRAMES</h3>
-  <%= render partial: "frames/frame", collection: @ecomic.frames %>
+  <%#= render partial: "frames/frame", collection: @ecomic.frames %>
 </p-->
 
 

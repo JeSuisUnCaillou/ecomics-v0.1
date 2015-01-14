@@ -1,22 +1,26 @@
 
-<%= form_for @frame, :url => frames_path, :html => { :multipart => true } do |f| %>
-  <div class="field">
-    <%= f.file_field :pictures, multiple: true %>
-  </div>
-  <!--div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div-->
-  <!--div class="field">
-    <%= f.label :duration %>
-    <%= f.number_field :duration %> ms
-  </div-->
-  <div class="field">
-    <%= f.hidden_field :ecomic_id, value: ecomic.id %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Create Frames" %>
+<%= form_for @frame, :url => frames_path,
+                     :html => { :multipart => true, class: "form-inline" } do |f| %>
+  <div class="form-group">
+    <%= f.file_field :pictures, multiple: true, class:"btn btn-default" %>
   </div>
 
+  <div class="form-group">
+    <%= f.hidden_field :ecomic_id, value: ecomic.id %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Create Frames", class: "btn btn-default" %>
+  </div>
+
+  <!--div class="field">
+    <%#= f.label :name %>
+    <%#= f.text_field :name %>
+  </div-->
+  <!--div class="field">
+    <%#= f.label :duration %>
+    <%#= f.number_field :duration %> ms
+  </div-->
 <% end %>
+
 
