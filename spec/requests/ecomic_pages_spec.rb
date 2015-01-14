@@ -15,7 +15,6 @@ describe "eComic pages" do
   describe "Edit eComic Page" do
     describe "without being logged in" do
       before { visit edit_ecomic_path(ecomic) }
-      it { should_not have_content("Editing ecomic") }
       it { should have_content("You need to sign in or sign up before continuing.") }
     end
  
@@ -24,7 +23,6 @@ describe "eComic pages" do
         sign_in FactoryGirl.create(:user)
         visit edit_ecomic_path(ecomic)
       end
-      it { should_not have_content("Editing ecomic") }
       it { should have_content("You're not the owner, you can't do that.") } 
     end
 
@@ -33,7 +31,6 @@ describe "eComic pages" do
         sign_in user
         visit edit_ecomic_path(ecomic)
       end
-      it { should have_content("Editing ecomic") }
       it { should_not have_content("You're not the owner, you can't do that.") } 
 
       describe "editing a comic" do

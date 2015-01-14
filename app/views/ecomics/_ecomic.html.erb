@@ -5,6 +5,6 @@
     <span><%= ecomic.description %></span>
   </div>
   <div class="text-center ecomic-image-holder">
-    <%= image_tag ecomic.frames.first.picture.url(:original) %>
+    <%= image_tag ecomic.frames.first.picture.url(:original) if !ecomic.frames.empty?%>
   </div>
 </div>
