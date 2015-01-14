@@ -79,4 +79,8 @@ h3 {
 .text-holder {
   word-wrap: break-word;
 }
-
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

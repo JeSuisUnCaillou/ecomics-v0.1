@@ -1,0 +1,13 @@
+<tr class="frame-container">
+  <td>
+    <%= image_tag frame_overview.picture.url(:thumb), height: 50 %>
+  </td>
+  <td>
+    <%= frame_overview.name %>
+  </td>
+  <td>
+    
+  <%= link_to "delete", frame_path(frame_overview), method: :delete %>
+  <%= link_to "edit", edit_frame_path(frame_overview) %>
+  </td>
+</tr>

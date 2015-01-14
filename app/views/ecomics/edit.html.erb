@@ -1,4 +1,21 @@
-<h1>Editing ecomic</h1>
+
+<div class="row">
+  <div class="col-md-4 ecomic-left-panel">
+    <table class="table table-striped">
+      <tbody>
+        <%= render partial: "frames/frame_overview", collection: @ecomic.frames %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-8 ecomic-right-panel">
+    
+  </div>
+</div>
+
+
+
+
+<h1>Edit my comic</h1>
 
 <%= render 'form' %>
 
@@ -17,3 +34,4 @@
 
 <%= link_to 'Show', @ecomic %> |
 <%= link_to 'Back', ecomics_path %>
+

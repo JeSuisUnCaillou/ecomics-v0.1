@@ -18,7 +18,7 @@
   <%= render 'layouts/header' %>
 
 
-  <div class="container">
+  <div class="<%= params[:controller]+"/"+params[:action] == "ecomics/edit" ? "container-fluid" : "container" %>">
     <% if !notice.nil? %><p class="alert alert-success"><%= notice %></p><%end%>
     <% if !alert.nil? %><p class="alert alert-danger"><%= alert %></p><%end%>
     <%= yield %>
