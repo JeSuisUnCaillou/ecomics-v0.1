@@ -2,7 +2,8 @@
 <%= form_for @frame, :url => frames_path,
                      :html => { :multipart => true, class: "form-inline" } do |f| %>
   <div class="form-group">
-    <%= f.file_field :pictures, multiple: true, class:"btn btn-default" %>
+    <label class="sr-only" for="frame_file_field">Picture files</label>
+    <%= f.file_field :pictures, multiple: true, class:"btn btn-default", id: "frame_file_field" %>
   </div>
 
   <div class="form-group">
@@ -10,7 +11,7 @@
   </div>
 
   <div class="form-group">
-    <%= f.submit "Create Frames", class: "btn btn-default" %>
+    <%= f.submit "Add Pictures", class: "btn btn-default" %>
   </div>
 
   <!--div class="field">
