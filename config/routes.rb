@@ -1,6 +1,9 @@
 EcomicsV01::Application.routes.draw do
   resources :ecomics
   resources :frames
+
+  match 'update_all', to: 'frames#update_all', :as => :update_all, :via => :put
+
   match 'myecomics', to: 'ecomics#myecomics', via: 'get' 
 
 

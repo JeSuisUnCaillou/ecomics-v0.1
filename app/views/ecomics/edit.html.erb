@@ -3,14 +3,39 @@
 
 <div class="row">
   <div class="col-md-4 ecomic-left-panel">
+
+<%= form_for :frame, :url => update_all_path, :html => { :method => :put } do %>
+  <table>
+    <% @ecomic.frames.each do |frame| %>
+      <%= fields_for "frame[]", frame do |frame_fields| %>
+    <tr>
+      <td><%= frame_fields.number_field :duration %></td>
+    </tr>
+      <% end %>
+    <% end %>
+  </table>
+
+  <div class="actions">
+    <%= submit_tag %>
+  </div>
+<% end %>
+
+
     <div class="frames-menu">
-       <a class="btn btn-default" href="#" data-toggle="modal" data-target="#myModal">Add Pictures</a>
+      <a class="btn btn-default" href="#"
+                                 data-toggle="modal"
+                                 data-target="#myModal">
+                                 Add Pictures</a>
+
     </div>
+
     <table class="table table-striped table-hover">
       <tbody>
         <%= render partial: "frames/frame_overview", collection: @ecomic.frames %>
       </tbody>
     </table>
+
+
   </div>
 
   <div class="col-md-8 ecomic-right-panel">

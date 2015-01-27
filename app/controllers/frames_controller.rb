@@ -55,6 +55,16 @@ class FramesController < ApplicationController
     end
   end
 
+  def update_all
+    @ecomic = nil
+    params['frame'].keys.each do |id|
+      @ecomic = @frame.ecomic
+      @frame = Frame.find(id.to_i)
+      @frame.update_attributes(params['frame'][id])
+    end
+    redirect_to(edit_ecomic_path(@ecomic))
+  end
+
 
   private
     def frame_params
