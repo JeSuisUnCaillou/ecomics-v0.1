@@ -18,10 +18,14 @@
   <%= render 'layouts/header' %>
 
 
-  <div class="body-container <%= params[:controller]+"/"+params[:action] == "ecomics/edit" ? "container-fluid" : "container" %>">
+  <div class="body-container container-full">
+
     <% if !notice.nil? %><p class="alert alert-success"><%= notice %></p><%end%>
     <% if !alert.nil? %><p class="alert alert-danger"><%= alert %></p><%end%>
+
     <%= yield %>
+
+
   </div>
 
 </body>
