@@ -9,7 +9,15 @@ $light-grey: #f5f5f5;
 
 .home-presentation {
   background-color: $light-grey;
-  padding: 50px 0 50px 0;
+  padding: 50px 0 100px 0;
+
+
+  img.logo {
+    display: inline-block;
+    height: 75px;
+    margin-top: 10px;
+  }
+  h1 { margin-bottom: 0px;}
 
   .discover {
     margin-top: 50px;
@@ -19,6 +27,33 @@ $light-grey: #f5f5f5;
 }
 
 .home-comics {
+  background-color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  .mosaique {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .coming-soon {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    .soon-text {
+      margin-top: 237px;
+      font-size: 75px;
+      font-weight: bold;
+    } 
+  }
+}
+
+.home-editor {
+  background-color: $light-grey;
+}
+
+.home-contact {
   background-color: white;
 }
 

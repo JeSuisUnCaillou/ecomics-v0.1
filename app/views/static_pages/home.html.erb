@@ -8,22 +8,45 @@
 
 <div class="col-md-12 home-presentation">
   <div class="text-center">
-    <h1>Welcome to myPopComics</h1>
-    <h3>Where you finally can easily create interactive webcomics</h3>
+    <h1>Welcome to <%= image_tag "logo-mypopcomics-big.png", alt:"myPopComics", class: "img-responsive logo"%></h1>
+    <h3>Where you finally can easily create and read interactive webcomics</h3>
   </div>
 
-  <div class="discover">
+  <div class="discover row">
     <div class="col-md-6" style="text-align: right;">You're a webcomic artist :</div>
     <div class="col-md-6"> Discover our creation tool </div>
  
-    <div class="col-md-6" style="text-align: right;">You read lots of webcomics :</div>
-    <div class="col-md-6"> Discover a new kind of comics </div>
+    <div class="col-md-6" style="text-align: right;">You like to read webcomics :</div>
+    <div class="col-md-6"> Discover a new interactive kind</div>
   </div>
 </div>
 
 
+<%#= TEMPORAIRE %>
 <div class="col-md-12 home-comics">
- ii 
+  <div class="row">
+    <div class="col-md-1"> </div>
+    <% for i in (1..5) do %>
+      <div class="col-md-2 mosaique">
+        <%= image_tag "fake_comics/#{i}.jpg", class: "img-responsive" %>
+      </div>
+    <% end %>
+    <div class="col-md-1"> </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"> </div>
+    <% for i in (6..10) do %>
+      <div class="col-md-2 mosaique">
+        <%= image_tag "fake_comics/#{i}.jpg", class: "img-responsive" %>
+      </div>
+    <% end %>
+    <div class="col-md-1"> </div>
+  </div>
+
+  <div class="coming-soon text-center">
+    <div class="soon-text">COMING SOON</div>
+  </div>
+
 </div>
 
 
